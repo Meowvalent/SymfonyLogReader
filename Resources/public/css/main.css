@@ -1,0 +1,16 @@
+#grepKeyword, #settings { 
+    font-size: 80%; 
+}
+.float {
+    background: white; 
+    border-bottom: 1px solid black; 
+    padding: 10px 0 10px 0; 
+    margin: 0px;  
+    height: 30px;
+    width: 100%; 
+    text-align: left;
+}
+.results {
+    padding-bottom: 20px;
+}
+
