@@ -1,0 +1,7 @@
+parameters:
+#    parasys_log_reader.example.class: Parasys\LogReaderBundle\Example
+
+services:
+#    parasys_log_reader.example:
+#        class: %parasys_log_reader.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

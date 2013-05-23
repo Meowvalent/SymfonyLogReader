@@ -1,0 +1,3 @@
+parasys_log_reader_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: ParasysLogReaderBundle:Default:index }
