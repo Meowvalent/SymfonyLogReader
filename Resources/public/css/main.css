@@ -2,6 +2,9 @@
     font-size: 80%; 
 }
 .float {
+    position: fixed;
+    top: 0;
+    left: auto;
     background: white; 
     border-bottom: 1px solid black; 
     padding: 10px 0 10px 0; 
