@@ -1,3 +1,6 @@
-parasys_log_reader_homepage:
-    pattern:  /tail
-    defaults: { _controller: ParasysLogReaderBundle:Default:index }
+log_reader_homepage:
+    path:  /log
+    defaults: { _controller: ParasysLogReaderBundle:Default:log }
+log_reader_tail:
+    path: /tail
+    defaults: { _controller: ParasysLogReaderBundle:Default:tail }
