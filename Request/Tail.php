@@ -79,10 +79,10 @@ class Tail {
 		 * Run the grep function to return only the lines we're interested in.
 		 */
 		if($invert == 0) {
-			$data = preg_grep("/$grepKeyword/",$data);
+			$data = preg_grep("/$grepKeyword/i",$data);
 		}
 		else {
-			$data = preg_grep("/$grepKeyword/",$data, PREG_GREP_INVERT);
+			$data = preg_grep("/$grepKeyword/i",$data, PREG_GREP_INVERT);
 		}
 		/**
 		 * If the last entry in the array is an empty string lets remove it.

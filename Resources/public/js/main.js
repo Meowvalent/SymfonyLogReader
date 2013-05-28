@@ -64,12 +64,17 @@ $(document).ready(function(){
     // Set up an interval for updating the log. Change updateTime in the PHPTail contstructor to change this
     $("#readLog").click(function() {
         var log = $("#logFile").val();
+        var name = $("#logFile").children().html();
         intervalHandler = setInterval(function(){updateLog(log)}, 2000);
+        $("#tail").empty();
+        $("#tail").append("Tailing file: " + name);
     });
 
     // Stop reading the log
     $("#stopLog").click(function() {
         clearInterval(intervalHandler);
+        $("#tail").empty();
+        $("#tail").append("Tailing file: ");
     });
 
     // Clear the log results
