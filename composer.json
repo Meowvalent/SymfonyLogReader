@@ -1,0 +1,17 @@
+{
+    "name": "parasys/log-reader",
+    "type": "symfony-bundle",
+    "description": "Reads the Symfony projects log files.",
+    "keywords": ["log", "reader"],
+    "homepage": "http://github.com/parasys/SymfonyLogReader",
+    "authors": [
+        {
+            "name": "Mark Valentin",
+            "email": "mavalentmv@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    }
+}
