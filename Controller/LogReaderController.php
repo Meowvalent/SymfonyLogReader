@@ -3,12 +3,34 @@
 namespace Parasys\LogReaderBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Security\Core\SecurityContext;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Finder\Finder;
 use Parasys\LogReaderBundle\Request\Tail;
 
-class DefaultController extends Controller
+class LogReaderController extends Controller
 {
+    public function loginAction() {
+        $request = $this->getRequest();
+        $session = $request->getSession();
+
+        // get the login error if there is one
+        if ($request->attributes->has(SecurityContext::AUTHENTICATION_ERROR)) {
+            $error = $request->attributes->get(SecurityContext::AUTHENTICATION_ERROR);
+        } else {
+            $error = $session->get(SecurityContext::AUTHENTICATION_ERROR);
+            $session->remove(SecurityContext::AUTHENTICATION_ERROR);
+        }
+
+        return $this->render(
+            'ParasysLogReaderBundle:LogReader:login.html.twig',
+            array(
+                // last username entered by the user
+                'last_username' => $session->get(SecurityContext::LAST_USERNAME),
+                'error'         => $error,
+            )
+        );
+    }
     public function logAction() {
         $logs = array();
         
@@ -22,8 +44,8 @@ class DefaultController extends Controller
         foreach($finder as $file) {
             $logs[$file->getFilename()] = $file->getRealpath();
         }
-        
-        return $this->render('ParasysLogReaderBundle:Default:index.html.twig', array('logs' => $logs));
+
+        return $this->render('ParasysLogReaderBundle:LogReader:log.html.twig', array('logs' => $logs));
     }
 
     public function tailAction() {
