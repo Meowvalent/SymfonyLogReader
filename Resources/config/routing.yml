@@ -1,6 +1,19 @@
 log_reader_homepage:
+    path:  /
+    host: logreader.dev
+    defaults: { _controller: ParasysLogReaderBundle:LogReader:log }
+log_reader_log:
     path:  /log
-    defaults: { _controller: ParasysLogReaderBundle:Default:log }
+    host: logreader.dev
+    defaults: { _controller: ParasysLogReaderBundle:LogReader:log }
 log_reader_tail:
     path: /tail
-    defaults: { _controller: ParasysLogReaderBundle:Default:tail }
+    host: logreader.dev
+    defaults: { _controller: ParasysLogReaderBundle:LogReader:tail }
+login:
+    path: /login
+    defaults:  { _controller: ParasysLogReaderBundle:LogReader:login }
+login_check:
+    path: /login_check
+logout:
+    path: /logout
