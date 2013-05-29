@@ -1,6 +1,7 @@
 {
     "name": "parasys/log-reader",
     "type": "symfony-bundle",
+    "license": "GNU GPLv3",
     "description": "Reads the Symfony projects log files.",
     "keywords": ["log", "reader"],
     "homepage": "http://github.com/parasys/SymfonyLogReader",
