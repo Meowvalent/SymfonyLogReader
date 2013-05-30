@@ -13,9 +13,9 @@
         }
     ],
     "autoload": {
-        "psr-0": {"Parasys\\Bundle\\LogReaderBundle": ""}
+        "psr-0": {"Parasys\\LogReaderBundle": ""}
     },
-    "target-dir": "Parasys/Bundle/LogReaderBundle",
+    "target-dir": "Parasys/LogReaderBundle",
     "require": {
         "php": ">=5.3.0"
     }
