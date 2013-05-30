@@ -10,6 +10,9 @@
         {% endstylesheets %}
     </head> 
     <body>
+        <div id="logout">
+            <a href="{{ path('logout') }}">Logout</a>
+        </div>
         <div id="settings" title="PHPTail settings">
             <p>Grep keyword (return results that contain this keyword)</p>
             <input id="grep" type="text" value=""/>
